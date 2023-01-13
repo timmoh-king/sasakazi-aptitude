@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sasakazi-aptitude/static/css/main.b9c71e90.css",
-    "main.js": "/sasakazi-aptitude/static/js/main.e9091b26.js",
+    "main.js": "/sasakazi-aptitude/static/js/main.49e448a5.js",
     "index.html": "/sasakazi-aptitude/index.html",
     "main.b9c71e90.css.map": "/sasakazi-aptitude/static/css/main.b9c71e90.css.map",
-    "main.e9091b26.js.map": "/sasakazi-aptitude/static/js/main.e9091b26.js.map"
+    "main.49e448a5.js.map": "/sasakazi-aptitude/static/js/main.49e448a5.js.map"
   },
   "entrypoints": [
     "static/css/main.b9c71e90.css",
-    "static/js/main.e9091b26.js"
+    "static/js/main.49e448a5.js"
   ]
 }
