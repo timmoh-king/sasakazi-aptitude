@@ -1,10 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback} from "react";
 import React from "react";
 import Button from "./button";
 
 const LandingPage = () => {
   const [joke, setJoke] = useState("");
+  const [randomQuote, setRandomQuote] = useState(1000);
 
   useEffect(() => {
     const options = {
@@ -26,9 +27,19 @@ const LandingPage = () => {
       });
   }, []);
 
+  const displayJoke = useCallback(() =>  setRandomQuote(Math.floor(Math.random() * 3000)))
+
+  useEffect(() => {
+    const timeOutId = setInterval(displayJoke, 3000);
+    return () => clearInterval(timeOutId);
+  }, [displayJoke]);
+
+  console.log(randomQuote);
+
+
   return (
     <div className="bg-white items-center">
-      <div className="container grid grid-cols-1 md:grid-cols-2 mt-[40px] mb-[40px] mx-auto items-flex flex-row">
+      <div className="container grid grid-cols-1 md:grid-cols-2 mt-[10px] mb-[10px] mx-auto items-flex flex-row">
         <div className="mt-[72px]">
           <p className="text-2xl text-start font-[700] text-sasakazi-blue">
             Get Today's Funny
@@ -54,13 +65,13 @@ const LandingPage = () => {
       </div>
       {joke ?
       <div>
-        <div className="container grid grid-cols-1 md:grid-cols-2 mt-[10px] mb-[10px] mx-auto">
-        <p className="text-sasakazi-black text-[24px]">
+        <div className="container grid grid-cols-1 md:grid-cols-2 mt-[10px] mb-[10px] mx-auto flex flex-row">
+          <p className="text-sasakazi-black text-[24px]">
           <span className="text-3xl font-bold text-sasakazi-blue">"</span>
-          {joke[5]['text']}
-          <span className="text-3xl font-bold text-sasakazi-sky-blue">"</span>
+          {joke[randomQuote].text}
+          <span className="text-xl font-bold text-sasakazi-sky-blue">"</span>
         </p>
-        <p className="py-2 text-2xl text-start mt-8 ml-6 text-sasakazi-black"> ~ {joke[1110]['author']}</p>
+        <p className="py-2 text-xl text-start mt-8 ml-6 text-sasakazi-black"> ~ {joke[randomQuote].author}</p>   
       </div>
       </div> : 
       <div>
