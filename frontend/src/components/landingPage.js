@@ -57,10 +57,10 @@ const LandingPage = () => {
         <div className="container grid grid-cols-1 md:grid-cols-2 mt-[10px] mb-[10px] mx-auto">
         <p className="text-sasakazi-black text-[24px]">
           <span className="text-3xl font-bold text-sasakazi-blue">"</span>
-          {joke[2970]['text']}
+          {joke[5]['text']}
           <span className="text-3xl font-bold text-sasakazi-sky-blue">"</span>
         </p>
-        <p className="py-2 text-2xl text-start mt-8 ml-6 text-sasakazi-black"> ~ {joke[2970]['author']}</p>
+        <p className="py-2 text-2xl text-start mt-8 ml-6 text-sasakazi-black"> ~ {joke[1110]['author']}</p>
       </div>
       </div> : 
       <div>
