@@ -74,8 +74,8 @@ const LandingPage = () => {
         <p className="py-2 text-xl text-start mt-8 ml-6 text-sasakazi-black"> ~ {joke[randomQuote].author}</p>   
       </div>
       </div> : 
-      <div>
-        <p className="py-4 text-start text-xl text-sasakazi-black">No jokes today!!</p>
+      <div className="container mx-auto">
+        <p className="py-4 text-start text-xl text-sasakazi-black">Loading data...!!</p>
      </div>}
     </div>
   );
