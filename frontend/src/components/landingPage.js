@@ -30,7 +30,7 @@ const LandingPage = () => {
   const displayJoke = useCallback(() =>  setRandomQuote(Math.floor(Math.random() * 3000)))
 
   useEffect(() => {
-    const timeOutId = setInterval(displayJoke, 3000);
+    const timeOutId = setInterval(displayJoke, 1800);
     return () => clearInterval(timeOutId);
   }, [displayJoke]);
 
